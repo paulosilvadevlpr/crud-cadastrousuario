@@ -2,6 +2,7 @@ package com.paulosilvadev.crud_cadastrousuario.infrastructure.entitys;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.Builder;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 @Builder
 @Table(name = "user")
 @Entity
+@Data
 
 public class User {
 
@@ -26,5 +28,6 @@ public class User {
     private String name;
 
     @Column(name = "birthday")
-    private LocalDate birthDay;
+    private LocalDate birthday;
+
 }
